@@ -1,4 +1,10 @@
-document.querySelector(".toggle-switch").addEventListener("click", () => {
-  document.querySelector(".toggle-switch").classList.toggle("toggle-on");
-  document.querySelector(".toggle-switch").classList.toggle("toggle-off");
+import { getEmail } from "./database.js";
+
+const signoutBtn = document.querySelector(".s-out");
+
+document.querySelector(".email-container p").textContent = await getEmail();
+
+signoutBtn.addEventListener("click", () => {
+  sessionStorage.removeItem("PiEeMoSi");
+  location.href = "./authentication.html";
 });

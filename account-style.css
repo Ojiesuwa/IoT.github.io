@@ -38,7 +38,7 @@ main {
   height: 100lvh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   gap: 4rem;
   padding: 1rem 0 4.6rem;
 }
@@ -58,5 +58,5 @@ main {
   margin-top: 1rem;
   padding: 0.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
