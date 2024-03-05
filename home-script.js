@@ -15,7 +15,7 @@ renderByUpdate();
 
 lampButtonDOM.addEventListener("click", () => {
   if (
-    (document.querySelector(".light .inner-title").textContent = "Turned ON")
+    document.querySelector(".light .inner-title").textContent === "Turned ON"
   ) {
     toggleLampDB(false);
   } else {
