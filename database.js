@@ -95,9 +95,11 @@ export function renderByUpdate() {
 }
 
 export function toggleLampDB(state) {
-  const db = getDatabase();
-  update(ref(db, "/"), {
-    webInstruction: state ? "LAMP:ON" : "LAMP:OFF",
+  return new Promise(async (resolve, reject) => {
+    const db = getDatabase();
+    await update(ref(db, "/"), {
+      webInstruction: state ? "LAMP:ON" : "LAMP:OFF",
+    });
   });
 }
 

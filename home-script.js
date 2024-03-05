@@ -13,12 +13,12 @@ let lampButtonDOM = document.querySelector(".light");
 
 renderByUpdate();
 
-lampButtonDOM.addEventListener("click", () => {
+lampButtonDOM.addEventListener("click", async () => {
   if (
     document.querySelector(".light .inner-title").textContent === "Turned ON"
   ) {
-    toggleLampDB(false);
+    await toggleLampDB(false);
   } else {
-    toggleLampDB(true);
+    await toggleLampDB(true);
   }
 });
